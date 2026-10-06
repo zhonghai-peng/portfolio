@@ -3,187 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zhonghai Peng | Career Advisor & Media Producer</title>
+    <title>PENG ZHONGHAI | Portfolio & Timeline</title>
     <!-- Tailwind CSS 样式库 -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* 纯黑背景与档案库风格 */
+        body {
+            background-color: #000000;
+            color: #ededed;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
         .lang-en, .lang-jp { display: none; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+<body class="antialiased selection:bg-white selection:text-black">
 
-    <!-- 导航栏 -->
-    <header class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="font-bold text-lg tracking-wider text-slate-900">PENG ZHONGHAI</a>
+    <!-- 顶部导航栏 -->
+    <header class="sticky top-0 z-50 bg-black/90 backdrop-blur-md border-b border-neutral-800">
+        <div class="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="#" class="font-mono font-bold tracking-widest text-sm text-white">PENG ZHONGHAI</a>
             <div class="flex items-center space-x-6">
-                <nav class="hidden md:flex space-x-6 text-sm font-medium text-slate-600">
-                    <a href="#about" class="hover:text-blue-600 transition" data-zh="关于我" data-jp="プロフィール" data-en="About">关于我</a>
-                    <a href="#services" class="hover:text-blue-600 transition" data-zh="服务内容" data-jp="サービス" data-en="Services">服务内容</a>
-                    <a href="#portfolio" class="hover:text-blue-600 transition" data-zh="作品与经历" data-jp="実績" data-en="Portfolio">作品与经历</a>
-                    <a href="#contact" class="hover:text-blue-600 transition" data-zh="联系方式" data-jp="お問い合わせ" data-en="Contact">联系方式</a>
+                <nav class="hidden md:flex space-x-6 text-xs font-mono text-neutral-400">
+                    <a href="#about" class="hover:text-white transition" data-zh="关于" data-jp="プロフィール" data-en="About">关于</a>
+                    <a href="#history" class="hover:text-white transition" data-zh="个人履历" data-jp="個人履歴" data-en="History">个人履历</a>
+                    <a href="#skills" class="hover:text-white transition" data-zh="技能" data-jp="スキル" data-en="Skills">技能</a>
+                    <a href="#contact" class="hover:text-white transition" data-zh="联系" data-jp="連絡先" data-en="Contact">联系</a>
                 </nav>
                 <!-- 语言切换按钮 -->
-                <div class="flex space-x-1 border border-slate-300 rounded-full p-1 text-xs">
-                    <button onclick="setLang('zh')" id="btn-zh" class="px-2.5 py-1 rounded-full bg-blue-600 text-white font-medium transition">中</button>
-                    <button onclick="setLang('jp')" id="btn-jp" class="px-2.5 py-1 rounded-full text-slate-600 hover:text-slate-900 transition">日</button>
-                    <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-1 rounded-full text-slate-600 hover:text-slate-900 transition">EN</button>
+                <div class="flex space-x-1 border border-neutral-800 rounded-full p-1 text-xs font-mono">
+                    <button onclick="setLang('zh')" id="btn-zh" class="px-2.5 py-0.5 rounded-full bg-white text-black font-bold transition">中</button>
+                    <button onclick="setLang('jp')" id="btn-jp" class="px-2.5 py-0.5 rounded-full text-neutral-400 hover:text-white transition">日</button>
+                    <button onclick="setLang('en')" id="btn-en" class="px-2.5 py-0.5 rounded-full text-neutral-400 hover:text-white transition">EN</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 首屏 Hero 区域 -->
-    <section class="max-w-6xl mx-auto px-6 py-20 md:py-32 flex flex-col items-center text-center">
-        <span class="px-3 py-1 mb-4 text-xs font-semibold tracking-wider text-blue-600 uppercase bg-blue-50 rounded-full" data-zh="中日文化与商务交流桥梁" data-jp="日中文化・ビジネス交流の架け橋" data-en="Bridge for Sino-Japanese Exchange">中日文化与商务交流桥梁</span>
-        <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">
-            Zhonghai Peng <span class="text-blue-600">(彭 仲海)</span>
-        </h1>
-        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mb-8 leading-relaxed" data-zh="致力于通过多语言商务通译、SNS 运营代行、专业影像拍摄与剪辑，为您创造跨文化价值。" data-jp="多言語ビジネス通訳、SNS運用代行、プロフェッショナルな映像制作・編集を通じて、異文化間の価値を創造します。" data-en="Creating cross-cultural value through multilingual business interpretation, SNS management, and professional media production.">
-            致力于通过多语言商务通译、SNS 运营代行、专业影像拍摄与剪辑，为您创造跨文化价值。
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
-            <a href="#contact" class="px-6 py-3 bg-blue-600 text-white font-medium rounded-lg shadow-md hover:bg-blue-700 transition" data-zh="获取合作咨询" data-jp="お仕事のご相談" data-en="Get in Touch">获取合作咨询</a>
-            <a href="#portfolio" class="px-6 py-3 bg-white border border-slate-300 text-slate-700 font-medium rounded-lg shadow-sm hover:bg-slate-50 transition" data-zh="查看作品经历" data-jp="実績を見る" data-en="View Portfolio">查看作品经历</a>
+    <!-- 首屏介绍 -->
+    <section class="max-w-4xl mx-auto px-6 pt-24 pb-16 border-b border-neutral-900">
+        <div class="space-y-4">
+            <span class="text-xs font-mono tracking-widest text-neutral-500 uppercase" data-zh="1998年生まれ • 映像・通訳・プロジェクトマネジメント" data-jp="1998年生まれ • 映像・通訳・プロジェクトマネジメント" data-en="1998 • Media, Translation & PM">1998年出生 • 映像・通訳・プロジェクトマネジメント</span>
+            <h1 class="text-4xl md:text-5xl font-light tracking-tight text-white font-mono">
+                PENG ZHONGHAI <span class="text-neutral-500">(彭 仲海)</span>
+            </h1>
+            <p class="text-base text-neutral-400 max-w-2xl leading-relaxed font-light" data-zh="童年辗转于美国、上海、苏州，后长期在日本生活。横跨理科逻辑与人文视野，专注于中日商务通译、SNS运营代行、纪录片导演与多媒体创作。" data-jp="幼少期を米国・上海・蘇州で過ごし、日本へ。理系の論理と人文科学の視野を併せ持ち、日中ビジネス通訳、SNS運用代行、ドキュメンタリー制作等を手がける。" data-en="Grew up across the US, Shanghai, and Suzhou, now based in Japan. Bridging cultures through media production, translation, and project management.">
+                童年辗转于美国、上海、苏州，后长期在日本生活。横跨理科逻辑与人文视野，专注于中日商务通译、SNS运营代行、纪录片导演与多媒体创作。
+            </p>
         </div>
     </section>
 
-    <!-- 服务内容 (副业方向) -->
-    <section id="services" class="bg-white py-20 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-slate-900 mb-12" data-zh="副业服务方向" data-jp="提供可能なサービス" data-en="Services">副业服务方向</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <!-- 卡片 1 -->
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">🌐</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-zh="中日翻译与商务通译" data-jp="日中翻訳・ビジネス通訳" data-en="Interpretation & Translation">中日翻译与商务通译</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed" data-zh="深厚的中日双语背景，擅长舞台剧、商业会谈、ToB 会议通译、文案翻译及文化交流项目对接。" data-jp="深い日中バイリンガル背景を持ち、舞台芸術、商談、ToB会議の通訳、各種翻訳、文化交流プロジェクトのコーディネートに対応。" data-en="Professional bilingual support for business meetings, stage arts, localization, and cultural exchange coordination.">深厚的中日双语背景，擅长舞台剧、商业会谈、ToB 会议通译、文案翻译及文化交流项目对接。</p>
-                </div>
-                <!-- 卡片 2 -->
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">📱</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-zh="SNS 运营代行与策划" data-jp="SNS運用代行・企画" data-en="SNS Management">SNS 运营代行与策划</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed" data-zh="拥有多年房地产、品牌宣传、跨国项目的 SNS 矩阵运营、内容策划与 ToB 营销推广经验。" data-jp="不動産、ブランドプロモーション、クロスボーダー案件におけるSNSアカウント運用、コンテンツ企画、ToBマーケティングの豊富な実績。" data-en="Comprehensive experience in multi-platform SNS operations, content planning, and brand marketing.">拥有多年房地产、品牌宣传、跨国项目的 SNS 矩阵运营、内容策划与 ToB 营销推广经验。</p>
-                </div>
-                <!-- 卡片 3 -->
-                <div class="p-8 bg-slate-50 rounded-2xl border border-slate-100 hover:shadow-lg transition">
-                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-xl mb-6">🎬</div>
-                    <h3 class="text-xl font-bold text-slate-900 mb-3" data-zh="影像拍摄、剪辑与设计" data-jp="映像制作・編集・デザイン" data-en="Video & Design">影像拍摄、剪辑与设计</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed" data-zh="精通 DaVinci Resolve, Final Cut Pro, Adobe 全家桶，独立完成长短视频、纪录片摄影脚本及宣传册设计。" data-jp="DaVinci Resolve, Premiere, InDesign等を駆使し、ドキュメンタリー映像制作から各種デザイン、冊子レイアウトまで対応。" data-en="Expert in video editing, documentary production, scriptwriting, and graphic design using Adobe and DaVinci tools.">精通 DaVinci Resolve, Final Cut Pro, Adobe 全家桶，独立完成长短视频、纪录片摄影脚本及宣传册设计。</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- 个人履历 (时间轴网格风格) -->
+    <section id="history" class="max-w-4xl mx-auto px-6 py-16">
+        <h2 class="text-2xl font-light text-white mb-12 tracking-wide font-mono border-b border-neutral-800 pb-4" data-zh="个人履历" data-jp="個人履歴" data-en="Personal History">个人履历</h2>
 
-    <!-- 关于我 -->
-    <section id="about" class="py-20 max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl font-bold text-slate-900 mb-6" data-zh="关于我与多元背景" data-jp="プロフィールと背景" data-en="About Me">关于我与多元背景</h2>
-                <p class="text-slate-600 mb-4 leading-relaxed" data-zh="1998年出生，成长于中国与日本，曾生活于美国、上海、苏州等地。本科先后就读于东京海洋大学（海洋资源环境）与法政大学（人间环境），具备扎实的理科逻辑与人文视野。" data-jp="1998年生まれ。中国と日本で育ち、米国、上海、蘇州などを経る。東京海洋大学を経て法政大学人間環境学部を卒業し、理系の論理と人文科学の視野を併せ持つ。" data-en="Born in 1998, with a multicultural background across China, Japan, the US, and more. Graduate of Hosei University with a strong blend of scientific logic and humanistic perspective.">
-                    1998年出生，成长于中国与日本，曾生活于美国、上海、苏州等地。本科先后就读于东京海洋大学与法政大学，具备扎实的理科逻辑与人文视野。
-                </p>
-                <p class="text-slate-600 mb-6 leading-relaxed" data-zh="持有 PMP（项目管理专业人士）认证，拥有多年大厂及多语言文化项目的统筹与落地经验。热衷于通过影像、文字与跨文化桥梁连接世界。" data-jp="PMP（プロジェクトマネジメント・プロフェッショナル）資格を保有し、長年にわたり多言語文化プロジェクトを統括。映像や言葉を通じて世界をつなぐ活動に情熱を注ぐ。" data-en="Hold a PMP certification with extensive experience in project management, multilingual cultural projects, and visual storytelling.">
-                    持有 PMP（项目管理专业人士）认证，拥有多年文化项目的统筹与落地经验。
-                </p>
-                <div class="grid grid-cols-2 gap-4 text-sm font-medium">
-                    <div class="p-3 bg-white rounded-lg border border-slate-200">🇨🇳 中文：母语 (Native)</div>
-                    <div class="p-3 bg-white rounded-lg border border-slate-200">🇯🇵 日语：商务水平 (Business N1)</div>
-                    <div class="p-3 bg-white rounded-lg border border-slate-200">🇬🇧 英语：日常交流 (Conversational)</div>
-                    <div class="p-3 bg-white rounded-lg border border-slate-200">📜 资质：PMP 项目管理专家</div>
-                </div>
-            </div>
-            <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
-                <h3 class="text-xl font-bold text-slate-900 mb-4" data-zh="核心技能与工具" data-jp="スキルと使用ツール" data-en="Skills & Tools">核心技能与工具</h3>
-                <ul class="space-y-3 text-sm text-slate-600">
-                    <li class="flex justify-between border-b border-slate-100 pb-2">
-                        <span class="font-medium text-slate-800" data-zh="影视剪辑 / 调色" data-jp="映像編集・カラー" data-en="Video Editing">影视剪辑 / 调色</span>
-                        <span>DaVinci Resolve / Final Cut Pro / Premiere</span>
-                    </li>
-                    <li class="flex justify-between border-b border-slate-100 pb-2">
-                        <span class="font-medium text-slate-800" data-zh="摄影 / 后期" data-jp="写真撮影・現像" data-en="Photography">摄影 / 后期</span>
-                        <span>Lightroom / Photoshop</span>
-                    </li>
-                    <li class="flex justify-between border-b border-slate-100 pb-2">
-                        <span class="font-medium text-slate-800" data-zh="排版设计" data-jp="デザイン・レイアウト" data-en="Design">排版设计</span>
-                        <span>InDesign / Illustrator</span>
-                    </li>
-                    <li class="flex justify-between border-b border-slate-100 pb-2">
-                        <span class="font-medium text-slate-800" data-zh="项目统筹" data-jp="プロジェクト管理" data-en="Management">项目统筹</span>
-                        <span>PMP Certified / SNS Strategy</span>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- 项目与经历 -->
-    <section id="portfolio" class="bg-white py-20 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold text-center text-slate-900 mb-4" data-zh="精选项目与经历" data-jp="主な実績・プロジェクト" data-en="Portfolio & Projects">精选项目与经历</h2>
-            <p class="text-center text-slate-600 mb-12 max-w-xl mx-auto" data-zh="涵盖跨国文化交流、长篇纪录片创作、以及多年房地产与品牌 SNS 运营。" data-jp="国際文化交流、長編ドキュメンタリー制作、不動産・ブランドSNS運営など多岐にわたる実績。" data-en="Ranging from cross-border cultural exchange and documentary production to SNS brand management.">涵盖跨国文化交流、长篇纪录片创作、以及多年房地产与品牌 SNS 运营。</p>
-            
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- 项目 1 -->
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition">
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md" data-zh="纪录片与影像创作" data-jp="映像・ドキュメンタリー" data-en="Media Production">纪录片与影像创作</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2">《16901公里》超长篇ドキュメンタリー & 书籍</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-zh="独立策划、拍摄并执行超长途纪录片项目，同步独立创作并出版超百页中日双语纪实书籍（5万字以上），于法政大学稲垣ゼミ等进行公开展示。" data-jp="総長距離ドキュメンタリーの企画・撮影・実行。5万字を超える日中バイリンガル書籍（100ページ以上）の執筆・出版、大学卒業展での公開展示。" data-en="Planning and executing long-distance documentary projects, publishing a bilingual 50k+ word book, and exhibition at university.">独立策划、拍摄并执行超长途纪录片项目，同步独立创作并出版超百页中日双语纪实书籍（5万字以上）。</p>
-                </div>
-                <!-- 项目 2 -->
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition">
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md" data-zh="商务通译与文化交流" data-jp="ビジネス通訳・文化交流" data-en="Exchange & Translation">商务通译与文化交流</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2" data-zh="中日文化演剧、旅游局访日项目对接" data-jp="日中舞台芸術・観光局訪日プロジェクト" data-en="Sino-Japanese Cultural Projects">中日文化演剧、旅游局访日项目对接</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-zh="担任中国文化旅行局代表团访日期间的会议通译、商务接待、作品マッチング；主导日中舞台剧与音乐剧商谈通译。" data-jp="中国文化旅行局代表団の訪日における会議通訳、アテンド、ビジネスマッチング。日中舞台芸術・ミュージカル商談の通訳を担当。" data-en="Interpretation and business matching for cultural delegations and theatrical negotiations between China and Japan.">担任中国文化旅行局代表团访日期间的会议通译、商务接待、作品マッチング；主导日中舞台剧与音乐剧商谈通译。</p>
-                </div>
-                <!-- 项目 3 -->
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition">
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md" data-zh="SNS 运营与房地产咨询" data-jp="SNS運用・不動産プロジェクト" data-en="SNS & Real Estate">SNS 运营与房地产咨询</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2" data-zh="多社房地产 SNS 运营与 ToB 营销项目管理" data-jp="複数不動産会社のSNS運営・ToBマーケティングPM" data-en="Real Estate SNS & ToB Marketing">多社房地产 SNS 运营与 ToB 营销项目管理</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-zh="长期负责株式会社 ELEMAX、GAYA不动产、住福等多家企业的 SNS 运营、日常事务及 PM 项目管理，为企业带来稳定线上增长。" data-jp="エレマックス、GAYA不動産、住福などのSNS運営、PM業務を担当し、企業のオンライン集客とマーケティングをサポート。" data-en="Managed SNS operations and project coordination for multiple real estate and corporate clients, driving consistent growth.">长期负责多家企业的 SNS 运营、日常事务及 PM 项目管理，为企业带来稳定线上增长。</p>
-                </div>
-                <!-- 项目 4 -->
-                <div class="border border-slate-200 rounded-2xl p-6 hover:shadow-md transition">
-                    <span class="text-xs font-semibold text-blue-600 bg-blue-50 px-2.5 py-1 rounded-md" data-zh="跨国旅行策划与影像" data-jp="国際旅行企画・映像" data-en="Travel & Media Production">跨国旅行策划与影像</span>
-                    <h3 class="text-xl font-bold text-slate-900 mt-3 mb-2" data-zh="埃及、越南、台湾、澳大利亚跨国纪实企划" data-jp="エジプト・ベトナム・台湾・オーストラリア縦断企画" data-en="International Expedition Media">埃及、越南、台湾、澳大利亚跨国纪实企划</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed mb-4" data-zh="成功策划并执行多国、多人的深度探险与纪实项目（如45天澳大利亚横断等），兼任团队领队、导演与影像创作者。" data-jp="複数名による長期縦断プロジェクト（オーストラリア45日縦断など）の企画・実行。チームリーダー、監督、映像クリエイターを兼任。" data-en="Planned and executed large-scale international expedition projects, serving as team leader, director, and media producer.">成功策划并执行多国、多人的深度探险与纪实项目，兼任团队领队、导演与影像创作者。</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 联系方式 -->
-    <section id="contact" class="py-20 max-w-4xl mx-auto px-6 text-center">
-        <h2 class="text-3xl font-bold text-slate-900 mb-4" data-zh="开启副业合作与交流" data-jp="お仕事のご依頼・お問い合わせ" data-en="Let's Work Together">开启副业合作与交流</h2>
-        <p class="text-slate-600 mb-8" data-zh="无论是以案代理、SNS 营销、影像制作、还是中日翻译，欢迎随时联系我！" data-jp="SNS運用、映像制作、翻訳、その他プロジェクトのご相談は、お気軽にご連絡ください！" data-en="Open for freelance projects in SNS management, video production, translation, and more. Feel free to reach out!">无论是以案代理、SNS 营销、影像制作、还是中日翻译，欢迎随时联系我！</p>
-        <div class="inline-flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="mailto:zhonghai_peng@icloud.com" class="px-8 py-4 bg-blue-600 text-white font-medium rounded-xl shadow-md hover:bg-blue-700 transition" data-zh="发送邮件联系我" data-jp="メールを送る" data-en="Send an Email">发送邮件联系我：zhonghai_peng@icloud.com</a>
-        </div>
-    </section>
-
-    <!-- 页脚 -->
-    <footer class="bg-white border-t border-slate-200 py-8 text-center text-sm text-slate-500">
-        <p>&copy; 2026 Zhonghai Peng. All Rights Reserved.</p>
-    </footer>
-
-    <!-- 多语言切换脚本 -->
-    <script>
-        function setLang(lang) {
-            // 更新按钮样式
-            ['zh', 'jp', 'en'].forEach(l => {
-                const btn = document.getElementById(`btn-${l}`);
-                if (l === lang) {
-                    btn.className = "px-2.5 py-1 rounded-full bg-blue-600 text-white font-medium transition";
-                } else {
-                    btn.className = "px-2.5 py-1 rounded-full text-slate-600 hover:text-slate-900 transition";
-                }
-            });
-
-            // 切换文本显示
-            document.querySelectorAll('[data-zh]').forEach(el => {
-                el.innerText = el.getAttribute(`data-${lang}`);
-            });
-        }
-    </script>
-</body>
-</html>
+        <!-- 高校时代 -->
+        <div class="mb-12">
+            <h3 class="text-sm font-mono text-neutral-500 mb-6 tracking-wider" data-zh="（高校时代）" data
